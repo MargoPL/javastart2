@@ -23,7 +23,7 @@ public class Generics1 {
     // Napisz generyczną metodę która przyjmuje Listę elementów
 // będących numerami i zwraca ich sumę
     private static<T extends Number> Double sumGenericsNumbersWithStream(List<T> list) {
-        return list.stream().mapToDouble(e->e.doubleValue()).sum();
+        return list.stream().mapToDouble(Number::doubleValue).sum();
     }
 
     private static <T extends Number> Long sumGenericsNumbers(List<T> list) {
